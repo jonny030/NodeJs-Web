@@ -1,6 +1,7 @@
 require('dotenv').config()  // 設定全域變數 .env 檔，以process.env.變數名讀取
 
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 var createError = require('http-errors');
 const express = require('express');
 var engine = require('ejs-locals');
