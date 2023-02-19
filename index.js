@@ -15,6 +15,7 @@ app.set('views', './views');
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.json());
+app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Start router
