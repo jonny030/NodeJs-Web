@@ -23,4 +23,6 @@ router.post('/searchList', (req, res) => {
 
 router.get('/todos', todoController.getAll);
 
+router.get('/test', todoController.getDB);
+
 module.exports = router;
