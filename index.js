@@ -16,6 +16,7 @@ app.engine('ejs', engine);
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
+app.use('/public', express.static('public'));   //設定靜態資料夾
 app.use(bodyParser.json());
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: false }));
