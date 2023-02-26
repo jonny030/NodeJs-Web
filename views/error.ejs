@@ -1,14 +1,4 @@
 <% layout('layout') %>
-
-<% if(error.status) { %>
-    <h1>
-        <%=message%>
-            <%=error.status%>
-    </h1>
-    <h3>
-        <%=error.stack%>
-    </h3>
-<% } else { %>  
 <style>
 html, body {
   height: 100%;
@@ -40,7 +30,6 @@ html, body {
   -webkit-text-fill-color: transparent;
   background-size: 400%;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
-  animation: animateTextBackground 10s ease-in-out infinite;
 }
 .error-page h1 + p {
   color: #d6d6d6;
@@ -54,7 +43,13 @@ html, body {
 <div class="error-page">
     <div>
         <h1 data-h1="404">404</h1>
-        <p data-p="NOT FOUND">NOT FOUND</p>
+        <p>NOT FOUND</p>
+    </div>
+    <div>
+      <% if(error.status) { %>
+        <h3>
+            <%=error.stack%>
+        </h3>
+      <% }%>
     </div>
 </div>
-<% } %>
