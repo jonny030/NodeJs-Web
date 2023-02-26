@@ -10,7 +10,7 @@ var engine = require('ejs-locals');
 
 const app = express();
 const port = process.env.PORT;
-const App_debug = process.env.APP_DEBUG;
+const App_debug = process.env.APP_DEBUG==='true'?true:false;
 
 app.engine('ejs', engine);
 app.set('views', './views');
