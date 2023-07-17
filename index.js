@@ -10,7 +10,7 @@ var engine = require('ejs-locals');
 
 const app = express();
 const port = process.env.PORT;
-const App_debug = process.env.APP_DEBUG==='true'?true:false;
+const App_debug = process.env.APP_DEBUG === 'true' ? true : false;
 
 app.engine('ejs', engine);
 app.set('views', './views');
@@ -29,12 +29,12 @@ app.use('/api', apiRouter);
 // End router
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
     next(createError(404));
 });
-  
+
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = App_debug ? err : {};

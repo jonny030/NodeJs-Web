@@ -1,4 +1,5 @@
 var express = require('express');
+const { curly } = require("node-libcurl");
 var router = express.Router();
 
 /* 引入 Controller */
@@ -21,6 +22,17 @@ router.get('/search', (req, res) => {
 
 router.post('/searchList', (req, res) => {
     res.send(req.body);
+});
+
+router.get('/testAPI', async (req, res) => {
+    const { statusCode, data, headers } = await curly.post('http://localhost:3000/api/', {
+        postFields: JSON.stringify({ field: 'value' }),
+        httpHeader: [
+            'Content-Type: application/json',
+            'Accept: application/json'
+        ],
+    })
+    res.send(data);
 });
 
 module.exports = router;
