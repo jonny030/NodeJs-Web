@@ -1,3 +1,10 @@
-<% layout('../layouts/main') %>
-<h1>User</h1>
-<img src="/public/images/test.png">
+<% layout('../layouts/main') -%>
+<h1>Hello <%=user%>!!</h1>
+<% for(let i=1;i<=10;i++){ %>
+    <div>
+        <%=i%>
+        <%if(i%2==0){%>
+            *
+        <% } %>
+    </div>
+<% } %>

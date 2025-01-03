@@ -1,6 +1,8 @@
-module.exports = class testController{
+class testController{
     index(req, res) {
         // res.render('hello');
         res.send('hello');
     }
 }
+
+module.exports = testController;

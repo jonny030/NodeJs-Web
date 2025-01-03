@@ -2,31 +2,13 @@
 
 ## 建立專案
 
-- 先建立 ***package.json***
+- 安裝所需套件，
 
-```jsx
-{
-  "dependencies": {
-    "body-parser": "^1.20.1",
-    "cookie-parser": "^1.4.6",
-    "dotenv": "^16.0.3",
-    "ejs": "^3.1.8",
-    "ejs-locals": "^1.0.2",
-    "express": "^4.18.2",
-    "http-errors": "^2.0.0",
-    "mysql": "^2.18.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.20"
-  },
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
-  }
-}
+```powershell
+npm install
 ```
 
-- 在terminal打上 npm install 安裝所需套件，再依照以下指令建立資料夾
+- 再依照以下指令建立資料夾
 
 ```powershell
 mkdir controllers

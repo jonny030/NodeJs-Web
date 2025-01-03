@@ -3,11 +3,11 @@ const { curly } = require("node-libcurl");
 var router = express.Router();
 
 /* 引入 Controller */
-const testController = new (require('../controllers/testController'))
+const testController = new (require('../controllers/testController'));
 
 /* 設定Web Router. */
 router.get('/', function (req, res, next) {
-    res.render('frontsite/index');
+    res.render('frontsite/index',{user: "Andy"});
 });
 
 // router.get('/index', testController.index);

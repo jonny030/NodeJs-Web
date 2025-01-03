@@ -9,4 +9,8 @@ router.post('/', jsonParser, (req, res, next) => {
     res.json(req.body);
 });
 
+router.post('/test', jsonParser, (req, res, next) => {
+    console.log(req.body);
+});
+
 module.exports = router;
