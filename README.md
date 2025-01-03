@@ -82,6 +82,6 @@ const HomeController = {
 module.exports = HomeController;
 ```
 
-現在，我們已經完成了MVC框架的所有組件。在終端中進入myapp文件夾，然後執行**`node app.js`**。接著在瀏覽器中訪問**`http://localhost:3000`**，您將看到網頁顯示"Hello, World!"。
+現在，我們已經完成了MVC框架的所有組件。在終端中進入myapp文件夾，然後執行**`node app.js`**。接著在瀏覽器中訪問`http://localhost:3000`，您將看到網頁顯示"Hello, World!"。
 
 希望這可以幫助您開始使用Node.js和Express框架編寫MVC框架的Web應用程序！
